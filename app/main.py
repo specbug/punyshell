@@ -6,7 +6,7 @@ def main():
 
     cmd = input()
     if cmd == "exit":
-        sys.exit(0)
+        break
     print(f"{cmd}: command not found")
     main()
 
