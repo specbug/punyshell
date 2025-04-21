@@ -7,7 +7,11 @@ def main():
     cmd = input()
     if cmd == "exit 0":
         exit(0)
-    print(f"{cmd}: command not found")
+    elif cmd.startswith("echo"):
+        _, *args = cmd.split()
+        print(" ".join(args))
+    else:
+        print(f"{cmd}: command not found")
     main()
 
 
