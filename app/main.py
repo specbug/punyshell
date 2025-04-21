@@ -5,8 +5,8 @@ def main():
     sys.stdout.write("$ ")
 
     cmd = input()
-    if cmd == "exit":
-        break
+    if cmd == "exit 0":
+        exit(0)
     print(f"{cmd}: command not found")
     main()
 
