@@ -10,6 +10,16 @@ def main():
     elif cmd.startswith("echo"):
         _, *args = cmd.split()
         print(" ".join(args))
+    elif cmd.startswith("type"):
+        if cmd == "type echo":
+            print("echo is a shell builtin")
+        elif cmd == "type exit":
+            print("exit is a shell builtin")
+        elif cmd == "type type":
+            print("type is a shell builtin")
+        else:
+            print(f"{cmd}: not found")
+
     else:
         print(f"{cmd}: command not found")
     main()
